@@ -1,0 +1,10 @@
+chainlit
+langchain
+langchain-community
+chromadb
+firecrawl
+python-dotenv
+requests
+langchain
+chromadb
+python-dotenv

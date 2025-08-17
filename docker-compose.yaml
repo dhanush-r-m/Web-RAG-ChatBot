@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  chainlit:
+    build: ./rag_backend
+    env_file:
+      - ./rag_backend/.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./chroma_store:/app/chroma_store
+    command: ["chainlit", "run", "app.py", "--host", "0.0.0.0", "--port", "8000"]
