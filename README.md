@@ -48,3 +48,53 @@ web-rag-chatbot/
 └── LICENSE
 
 ```
+---
+
+## ⚡ Setup
+1. Clone Repo
+```
+git clone https://github.com/dhanush-r-m/Web-RAG-ChatBot.git
+cd web-rag-chatbot
+```
+2. Install Python Dependencies
+```
+pip install -r requirements.txt
+```
+3. Install & Run Ollama
+```
+Download Ollama (Mac, Linux, Windows WSL supported)
+Pull required models:
+
+ollama pull mistral
+ollama pull nomic-embed-text
+```
+
+4. Crawl & Ingest Data
+```
+python crawler/ingest.py --url https://example.com
+```
+
+This extracts website content and stores embeddings in ChromaDB.
+
+5. Run the Chatbot
+```
+chainlit run app.py
+
+```
+Open → http://localhost:8000
+
+🔄 Reset Database
+
+To clear embeddings and start fresh:
+```
+python chroma/reset_chroma.py
+```
+⚙️ Configuration
+
+Set models in .env:
+```
+EMBED_MODEL=nomic-embed-text
+LLM_MODEL=mistral
+CHROMA_DIR=./chroma_store
+```
+
