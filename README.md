@@ -97,4 +97,11 @@ EMBED_MODEL=nomic-embed-text
 LLM_MODEL=mistral
 CHROMA_DIR=./chroma_store
 ```
+---
+
+## 👨‍💻 Author
+
+    Dhanush Moolemane
+    💡 Passionate about AI, ML, and building intelligent tutoring systems.
+    🔗 GitHub | LinkedIn
 
